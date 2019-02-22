@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mess</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<h1>Menu Will be displayed</h1>
+	<button><a href="/Student">Student</a></button>
+	<button><a href="/Manager">Manager</a></button>
+	<button><a href="/Guest">Guest</a></button>
+
+	<button><a href="#">Mark Leave Entry</a></button>
+	<button><a href="#">Feedback</a></button>
+	<button><a href="#">Check Mess Menu</a></button>
+	<button><a href="#">Check Mess Bill</a></button>
+
+	<form method="POST" action="/Student/MLE">
+		<input type="text" name="name" placeholder="Name" required>
+		<input type="text" name="rollNumber" placeholder="roll number" required>
+		<input type="date" id="date"name="date" data-date-inline-picker="true" required>
+		<input type="text" name="LeaveAddress" placeholder="Leave Address" required>
+		<input type="submit" id="button"  name="Submit">
+	</form>
+	<script type="text/javascript" src="js.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

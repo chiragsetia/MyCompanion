@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+    <a class="navbar-brand" href="/Student">MESS</a>
+    </div>
+ <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+        	<%if(currentStudent){%>
+                <li><a href="#">Hi, <%= currentStudent.rollNumber %></a></li>
+                <li><a href="/logout">Logout</a></li>
+                <%}%>
+        </ul>
+    </div>
+    </div>
+</nav>

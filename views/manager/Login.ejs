@@ -1,0 +1,13 @@
+<% include ../partials/header %> 
+<% include ..\partials\forManager %>
+<div style="text-align: center;">
+	<h1>Login!</h1>
+	<form action="/Manager/login" method="POST" class="black">
+	    <input type="text" name="username" placeholder="username">
+	    <input type="password" name="password" placeholder="password">
+	    <input type="submit" class="btn btn-primary" value="Login!">
+	</form>
+</div>
+
+
+<% include ../partials/footer %> 

@@ -1,0 +1,16 @@
+<%include ../partials/header%>
+
+<h1>Menu</h1>
+<ul>
+	<% menu.forEach(function(menu){ %>
+	<li><%=menu.day%></li>
+	<li><%=menu.breakfast%></li>
+	<li><%= menu.lunch%></li>
+	<li><%= menu.dinner%></li>
+	<hr>
+<% }); %>
+</ul>
+
+<div><a href="/Student" class="btn btn-primary">BACK</a></div>
+
+<%include ../partials/footer%>

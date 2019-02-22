@@ -1,0 +1,13 @@
+<% include ..\partials\header %>
+<% include ..\partials\forStudent %>
+
+
+<% bill.forEach(function(value){ %>
+		
+		<div class="containor"><%= value.rollNumber%> <%= value.month%> <%= value.bill%></div>
+		<hr>
+	
+<% }); %>
+
+<div><a href="/Student" class="btn btn-primary">BACK</a></div>
+<% include ..\partials\footer %>

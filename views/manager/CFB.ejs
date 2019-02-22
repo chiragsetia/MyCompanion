@@ -1,0 +1,23 @@
+<% include ..\partials\header %>
+<% include ..\partials\forManager %>
+<div class="container">
+	<div class="row">
+	<% feedbacks.forEach(function(feedback){ %>
+		<div class="col-lg-4 col-md-4" ><%= feedback.author.rollNumber %></div>
+		<div class="col-lg-4 col-md-4" ><%= feedback.review %></div>
+		<div class="col-lg-4 col-md-4" >
+			<form action="/Manager/CFB/<%=feedback._id%>?_method=DELETE" method="POST">
+				<input type="submit" value="Seen" class="btn btn-sm btn-success">
+			</form>
+		</div>
+	<% }) %>
+	</div>
+</div>
+
+
+<div class="container">
+	<a href="/Manager" class="btn btn-primary btn-lg btn-block">
+	BACK
+	</a>
+</div>
+<% include ..\partials\footer %>

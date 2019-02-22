@@ -1,0 +1,22 @@
+<%include ../partials/header%>
+<% include ..\partials\forManager %>
+<h2>Add new Student</h2>
+<form method="POST" action="/Manager/new" >
+<div style="text-align: center" class="jumbotron black">
+	<input type="input" name="student[name]" placeholder="name"  required>
+	<input type="input" name="student[rollNumber]" placeholder="Roll Number" required>
+	<input type="input" name="student[password]" placeholder="password" required>
+	<input type="input" name="student[branch]" placeholder="branch" required>
+	<input type="Number" name="student[year]" placeholder="year" required>
+	<input type="Number" name="student[contactNumber]" placeholder="Contact Number" required>
+
+	
+</div>
+<br>
+<div style="text-align: center">
+	<input type="submit" class="btn btn-success">
+</div>
+</form>
+
+
+<%include ../partials/footer%>

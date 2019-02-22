@@ -1,0 +1,29 @@
+<%include ../partials/header%>
+<% include ..\partials\forManager %>
+
+<h1>List of Students</h1>
+
+<ol>
+	<%students.forEach(function(student){%>
+		<div class="row">
+			<li>
+				<div class="col-lg-2"><%= student.rollNumber %></div>
+				<div class="col-lg-2"><%= student.name %></div>
+				<div class="col-lg-2"><%= student.password %></div>
+				<div class="col-lg-2"><%= student.branch %> / <%= student.year %></div>
+				<div class="col-lg-2"><%= student.contactNumber %></div>
+				<div class="col-lg-2">
+					<a class="btn btn-warning btn-block" href="/Manager/show/<%= student._id%>">
+						<b>edit/delete</b>
+					</a>
+				</div>
+			</li>
+		</div>
+	<%});%>
+
+</ol>
+	<div style="text-align: center">
+		<a class="btn btn-default" href="/Manager/new"> Add new Student</a>
+	</div>
+
+<%include ../partials/footer%>

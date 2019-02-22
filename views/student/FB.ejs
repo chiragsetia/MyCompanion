@@ -1,0 +1,14 @@
+<%include ../partials/header%>
+<% include ..\partials\forStudent %>
+
+
+<% feedbacks.forEach(function(fb){ %>
+	<%if(fb.author._id.equals(currentStudent._id)){%>
+	<%= fb.review%>
+	<br>
+	<%}%>
+<%});%>
+
+<a href="/Student/FB/new" class="btn btn-primary">Add New Feedback</a>
+
+<%include ../partials/footer%>

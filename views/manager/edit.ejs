@@ -1,0 +1,28 @@
+<% include ..\partials\header%>
+<% include ..\partials\forManager %>
+<h1>Edit Students Details</h1>
+
+<form method="POST" action="/Manager/edit/<%=student._id%>?_method=PUT">
+<div style="text-align: center"  class="jumbotron black">
+	<input type="input" name="student[name]" value="<%=student.name%>"  required>
+	<input type="input" name="student[rollNumber]" value="<%=student.rollNumber%>" required>
+	<input type="input" name="student[password]" value="<%=student.password%>" required>
+	<input type="input" name="student[branch]" value="<%=student.branch%>" required>
+	<input type="Number" name="student[year]" value="<%=student.year%>" required>
+	<input type="Number" name="student[contactNumber]" value="<%=student.contactNumber%>" required>
+	<input style="display: inline;" type="submit" class="btn btn-success" value="edit">
+	</form>
+</div>
+<br>
+<div style="text-align: center">
+	<div class="container">
+		<div class="row">
+			<form method="POST" action="/Manager/delete/<%=student._id%>?_method=DELETE">
+				<button  class="btn btn-danger">
+					Delete
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+<% include ..\partials\header%>

@@ -1,0 +1,12 @@
+<%include ../partials/header%>
+<% include ..\partials\forStudent %>
+
+<form method="POST"  action="/Student/MLE">
+		<input class="black " type="date" id="date"name="date" data-date-inline-picker="true" required>
+		<input class="black " type="text" name="LeaveAddress" placeholder="Leave Address" required>
+		<button class="btn" id="buttonMLE"> Submit</button>
+		<!-- <input type="submit" id="buttonMLE" class="btn"  name="Submit"> -->
+</form>
+
+<div><a href="/Student" class="btn btn-primary">BACK</a></div>
+<%include ..\partials\footer%>

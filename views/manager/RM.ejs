@@ -1,0 +1,26 @@
+<% include ..\partials\header %>
+<% include ..\partials\forManager %>
+<div class="row">
+	<% menu.forEach(function(day){ %>
+		<div class="col-lg-2 col-md-2" ><%= day.day %></div>
+		<div class="col-lg-10 col-md-10">
+			<div class="row">
+				<div class="col-lg-3 col-md-3" ><%= day.breakfast%></div>
+				<div class="col-lg-3 col-md-3" ><%= day.lunch %></div>
+				<div class="col-lg-3 col-md-3" ><%= day.dinner %></div>
+				<div class="col-lg-3 col-md-3" >
+					<a href="/Manager/ReviewMenu/<%= day._id %>/edit" class="btn btn-warning">edit</a>
+				</div>
+			</div>
+		</div>
+		
+	<% }) %>
+</div>
+
+<div style="text-align: center">
+	<a href="/Manager" class="btn btn-primary" >
+	< BACK
+	</a>
+</div>
+
+<% include ..\partials\footer %>

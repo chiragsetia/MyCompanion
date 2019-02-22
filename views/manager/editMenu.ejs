@@ -1,0 +1,19 @@
+<% include ..\partials\header %>
+<% include ..\partials\forManager %>
+<h1>Edit menu</h1>
+
+<form method="POST" class="black" action="/Manager/ReviewMenu/<%=day._id%>?_method=PUT">
+<div style="text-align: center" class="jumbotron">
+	<input type="input" name="day[day]" value="<%= day.day %>" disabled>
+	<input type="input" name="day[breakfast]" value="<%= day.breakfast %>">
+	<input type="input" name="day[lunch]" value="<%= day.lunch %>">
+	<input type="input" name="day[dinner]" value="<%= day.dinner %>">
+</div>
+<br>
+<div style="text-align: center">
+	<input type="submit" class="btn btn-success" value="Update">
+</div>
+</form>
+
+
+<% include ..\partials\footer %>

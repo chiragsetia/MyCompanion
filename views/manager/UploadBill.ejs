@@ -1,4 +1,9 @@
-<%include ../partials/header%>
+<%include ..\partials\header%>
 <% include ..\partials\forManager %>
 <p>Bill Amount</p>
+<h4>For all</h2>
+<form method="POST" action="/Manager/UploadBill" class="black">
+	<input type="text" name="month" placeholder="month">
+	<input type="number" step="100" name="Amount" placeholder="Bill">
+</form>
 <%include ..\partials\footer%>

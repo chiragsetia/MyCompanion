@@ -429,7 +429,7 @@ app.delete("/Manager/delete/:id", isLoggedIn, function(req,res){
 // for mess bill
 
 app.get("/Manager/UploadBill",function(req,res){
-	res.render("./manager/UploadBill")
+	res.render("./manager/UploadBill");
 })
 
 //login page

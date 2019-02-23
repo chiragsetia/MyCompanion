@@ -1,6 +1,13 @@
 var mongo=require("mongoose");
 var billSchema= new mongo.Schema({
-	rollNumber:String,
+	author: {
+      _id: {
+         type: mongo.Schema.Types.ObjectId,
+         ref: "Student"
+      },
+      name: String,
+      rollNumber:String
+   },
 	month:String,
 	bill:Number
 });

@@ -1,9 +1,25 @@
 <%include ..\partials\header%>
 <% include ..\partials\forManager %>
-<p>Bill Amount</p>
-<h4>For all</h2>
-<form method="POST" action="/Manager/UploadBill" class="black">
-	<input type="text" name="month" placeholder="month">
-	<input type="number" step="100" name="Amount" placeholder="Bill">
-</form>
+<h3>Upload Bill</h3>
+<div class="row">
+	<div class="col-lg-6">
+		<h4>For all</h2>
+		<form method="POST" action="/Manager/UploadBill" class="black">
+		<input type="text" name="month" placeholder="month">
+		<input type="number" step="100" name="Amount" placeholder="Bill">
+		<br>
+		<button class="btn  spaceButton">Upload</button>
+		</form>
+	</div>
+	<div class="col-lg-6">
+		<h4>For specified</h2>
+		<form method="POST" action="/Manager/UploadBill" class="black">
+		<input type="text" name="month" placeholder="month">
+		<input type="number" step="100" name="Amount" placeholder="Bill">
+		<br>
+		<button class="btn  spaceButton">Upload</button>
+		</form>
+	</div>
+</div>
+
 <%include ..\partials\footer%>

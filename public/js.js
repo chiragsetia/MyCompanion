@@ -1,6 +1,6 @@
 var date=document.querySelector("#date");
 var buttonLE=document.querySelector("#buttonMLE");
-	
+	if(date!=null){
 		date.addEventListener("change",function() {
 		if(this.value.localeCompare(String(new Date().toJSON().slice(0,10)))==1)
 		{
@@ -12,3 +12,6 @@ var buttonLE=document.querySelector("#buttonMLE");
 			buttonLE.disabled=true;
 		}
 		});
+
+	}
+		

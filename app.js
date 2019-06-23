@@ -268,7 +268,7 @@ app.get("/Manager/CLE",isLoggedIn, function(req, res){
 			console.log(err)
 			//error handling
 		}else{
-
+			console.log(leaves);
 			res.render("./manager/CLE",{leaves:leaves})
 		}
 	});

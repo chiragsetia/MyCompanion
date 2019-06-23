@@ -2,7 +2,7 @@
 <% include ..\partials\forManager %>
 <div class="row">
 	<% leaves.forEach(function(leave){ %>
-		<div class="col-lg-3 col-md-3" ><%= leave.rollNumber %></div>
+		<div class="col-lg-3 col-md-3" ><%= leave.author.rollNumber%></div>
 		<div class="col-lg-3 col-md-3" ><%= leave.leaveDate %></div>
 		<div class="col-lg-3 col-md-3" ><%= leave.returnDate %></div>
 		<div class="col-lg-3 col-md-3" >

@@ -13,3 +13,10 @@ h1{
 .spaceButton{
 	margin-top: 0.5%;
 }
+.header-centre {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+.brand-centre {float:none;}

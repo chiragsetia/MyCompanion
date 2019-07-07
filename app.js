@@ -14,9 +14,18 @@ var mongo=require("mongoose"),
 	Manager=require("./models/Manager"),
 	cookieParser = require('cookie-parser');
 
+app.get("/", function(req,res){
+	res.render("landing")
+});
+//mongo.connect("mongodb://localhost:27017/sw", {useNewUrlParser: true});
+mongo.connect("mongodb+srv://sw:swProject@cluster0-e5hjd.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true, useCreateIndex: true})
+.then(()=>{
+	console.log("connected");
+}).catch(err =>{
+	console.log(err.message);
+})
 
-	
-mongo.connect("mongodb://localhost:27017/sw", {useNewUrlParser: true});
+//mongo "mongodb+srv://cluster0-e5hjd.mongodb.net/test" --username sw
 app.set("view engine", "ejs");// we don't have to put ejs at the end
 //setting use
 app.use(bodyParser.urlencoded({extended:true}));// for converting body element or things from body into js form
@@ -330,6 +339,26 @@ app.get("/Manager/ReviewMenu/:id/edit", isLoggedIn, function(req,res)
 		}
 	});
 });
+//editing menu
+app.get("/Manager/addMenu",isLoggedIn, (req,res)=>{
+	res.render("./manager/addMenu")
+});
+
+
+//post for manager
+app.post("/Manager/addMenu",isLoggedIn,(req,res)=>{
+	menu.create(req.body.menu,function(err,newEntry){
+		if(err){
+			console.log(err);
+			res.redirect("/Manager/ReviewMenu");
+		}else{
+			console.log(newEntry);
+			res.redirect("/Manager/ReviewMenu");
+		}
+	});
+});
+
+
 
 app.put("/Manager/ReviewMenu/:id",isLoggedIn, function(req,res){
 	menu.findByIdAndUpdate(req.params.id, req.body.day ,function(err,updatedValue){
@@ -454,10 +483,12 @@ app.post("/Manager/login", passport.authenticate("local",
 // //starting the server
 // app.post("/Manager/SignUp", function(req, res){
 //     var newUser = new Manager({username: req.body.username});
+//     console.log(newUser);
 //     Manager.register(newUser, req.body.password, function(err, user){
 //         if(err){
-//             //req.flash("error", err.message);
-//             res.render("/Manager/SignUp");
+//             // req.flash("error", err.message);
+//             res.render("./manager/SignUp");
+//             console.log(err.message);
 //         }else
 //         {
 //         	passport.authenticate("local")(req, res, function(){
@@ -469,7 +500,7 @@ app.post("/Manager/login", passport.authenticate("local",
         
 //     });
 // });
-//
+
 
 app.get("/logout", function(req, res){
    req.logout();
@@ -521,6 +552,6 @@ app.use(function (req, res, next) {
   res.status(404).send("Sorry can't find that!")
 });
 
-app.listen(8000, function(){
-	console.log("Server has started");
+app.listen(process.env.PORT || 8000, function(){
+  console.log("Express server listening on port %d in %s mode");
 });

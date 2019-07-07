@@ -1,0 +1,22 @@
+<%include ../partials/header%>
+<% include ../partials/forManager %>
+<h1>Add menu</h1>
+<div class="container">
+	<form method="POST" class="black" action="/Manager/addMenu">
+	<div style="text-align: center" class="jumbotron">
+		<input type="input" name="menu[day]" placeholder="Day">
+		<input type="input" name="menu[breakfast]" placeholder="breakfast">
+		<input type="input" name="menu[lunch]" placeholder="lunch">
+		<input type="input" name="menu[dinner]" placeholder="Dinner">
+	</div>
+	<div class="row">
+		<div class="col-lg-4 col-md-4" ></div>
+		<div class="col-lg-4 col-md-4" >
+			<div style="text-align: center">
+				<input type="submit" class="btn btn-success btn-block" value="Add">
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4" ></div>	
+	</div>
+</div>
+</form>

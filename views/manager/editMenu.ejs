@@ -1,5 +1,5 @@
-<% include ..\partials\header %>
-<% include ..\partials\forManager %>
+<%include ../partials/header%>
+<% include ../partials/forManager %>
 <h1>Edit menu</h1>
 
 <form method="POST" class="black" action="/Manager/ReviewMenu/<%=day._id%>?_method=PUT">
@@ -11,9 +11,7 @@
 </div>
 <br>
 <div style="text-align: center">
-	<input type="submit" class="btn btn-success" value="Update">
+	<input type="submit" class="btn btn-success btn-md" value="Update">
 </div>
 </form>
-
-
-<% include ..\partials\footer %>
+<%include ../partials/footer%>

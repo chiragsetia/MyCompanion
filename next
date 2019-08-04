@@ -1,11 +1,15 @@
+add menu for rest of the days
+provide edit option for students
+add more constraints like year/phone number
+add geo location services
 broadcast
 upload mess bill
 generate bill
-flash messages
 bill to be done
-to specific ones
-and to all
+bill to specific ones and to all 
 go through middleware
 calculation of bill
 improve css
-make it online
+flash messages like display errors, wrong credentials
+add icon on top
+put contribution

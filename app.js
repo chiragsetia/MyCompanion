@@ -20,7 +20,6 @@ var mongo=require("mongoose"),
 // in commond line or heroku name must be in caps
 // like process.env.name of variable
 //in cmd export NAME="ABOVE LINE" with out quotes
-//"mongodb+srv://sw:swProject@cluster0-e5hjd.mongodb.net/test?retryWrites=true&w=majority"
 mongo.connect(process.env.DATABASEURL||"mongodb://localhost:27017/sw", {useNewUrlParser: true, useCreateIndex: true})
 .then(()=>{
 	console.log("connected to database");
